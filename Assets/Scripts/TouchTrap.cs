@@ -10,7 +10,6 @@ public class TouchTrap : MonoBehaviour
         {
             PlayerLogic playerLogic = collider.gameObject.GetComponent<PlayerLogic>();
             playerLogic.Kill();
-
         }
     }
 }

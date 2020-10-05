@@ -8,8 +8,6 @@ public class Teleport : MonoBehaviour
     public GameObject TeleportMarker;
     private void OnTriggerEnter(Collider collider)
     {
-        print(TeleportMarker.transform.position);
         collider.gameObject.transform.position = TeleportMarker.transform.position;
-        print(TeleportMarker.transform.position);
     }
 }

@@ -8,12 +8,19 @@ public class PlayerLogic : MonoBehaviour
     private Vector3 StartPos;
     private Rigidbody rb;
     public bool isDying = false;
+    public int Coins = 0;
     public void Kill()
     {
         print("You are ded");
+        Coins = 0;
         isDying = true;     
     }
 
+    public void CollectCoin()
+    {
+        Coins++;
+        print(Coins);
+    }
 
     void Start()
     {
@@ -31,7 +38,6 @@ public class PlayerLogic : MonoBehaviour
                 isDying = false;
                 transform.position = StartPos;
                 transform.localScale = Vector3.one;
-                print("You are dead!");
             }
         }
     }
