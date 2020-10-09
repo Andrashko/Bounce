@@ -8,18 +8,16 @@ public class PlayerLogic : MonoBehaviour
     private Vector3 StartPos;
     private Rigidbody rb;
     public bool isDying = false;
-    public int Coins = 0;
     public void Kill()
     {
-        print("You are ded");
-        Coins = 0;
+        if (!isDying)
+            Storage.SetLives(Storage.Lives -1);
         isDying = true;     
     }
 
     public void CollectCoin()
     {
-        Coins++;
-        print(Coins);
+        Storage.Coins++;
     }
 
     void Start()
